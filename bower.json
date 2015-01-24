@@ -13,5 +13,10 @@
     "ember-qunit": "0.1.8",
     "ember-qunit-notifications": "0.0.4",
     "qunit": "~1.15.0"
+  },
+  "devDependencies": {
+    "jquery.inputmask": "~3.1.57",
+    "momentjs": "~2.9.0",
+    "moment": "~2.9.0"
   }
 }
