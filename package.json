@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-input-mask",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "An ember-cli addon for creating input masks on text fields.",
   "directories": {
     "doc": "doc",
