@@ -11,7 +11,8 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": "https://github.com/AgilionApps/ember-cli-input-mask/",
+  "homepage": "https://github.com/AgilionApps/ember-cli-input-mask/blob/master/README.md",
   "engines": {
     "node": ">= 0.10.0"
   },
