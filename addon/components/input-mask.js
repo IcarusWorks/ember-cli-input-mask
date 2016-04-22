@@ -3,7 +3,9 @@
 import Ember from 'ember';
 
 export default Ember.TextField.extend({
-  initializeMask: function() {
+
+
+  initializeMask: Ember.on('didInsertElement', function() {
     var mask = this.get('mask');
 
     this.$().inputmask(mask, {
@@ -17,10 +19,15 @@ export default Ember.TextField.extend({
     // The input mask changes the value of the input from the original to a
     // formatted version. We need to manually send that change back to the
     // controller.
-    this.set('value', this.$().val());
-  }.on('didInsertElement'),
+    // But do this only if initial value is not null/undefined, otherwise
+    if (Ember.isPresent(this.get('value'))) {
+      Ember.run.scheduleOnce('afterRender', this, function(){
+        this.set('value',this.$().val());
+      });
+   }
+  }),
 
-  removeMask: function() {
+  removeMask: Ember.on('willDestroyElement', function() {
     this.$().inputmask('remove');
-  }.on('willDestroyElement')
+  })
 });
