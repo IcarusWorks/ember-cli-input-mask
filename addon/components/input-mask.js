@@ -17,7 +17,9 @@ export default Ember.TextField.extend({
     // The input mask changes the value of the input from the original to a
     // formatted version. We need to manually send that change back to the
     // controller.
-    this.set('value', this.$().val());
+    Ember.run.scheduleOnce('afterRender', this, function() {
+      this.set('value', this.$().val());
+    });
   }.on('didInsertElement'),
 
   removeMask: function() {
