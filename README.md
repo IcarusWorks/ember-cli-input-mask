@@ -1,3 +1,7 @@
+# ARCHIVED
+
+### This addon is no longer maintained. Please use https://github.com/pzuraq/ember-inputmask instead.
+
 # ember-cli-input-mask
 
 An ember-cli addon for creating input masks on text fields. It makes use of the [jquery.inputmask plugin](https://github.com/RobinHerbots/jquery.inputmask) to assist users in entering text that matches the required format.
